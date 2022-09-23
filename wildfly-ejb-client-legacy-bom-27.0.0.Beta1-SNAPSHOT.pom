@@ -45,10 +45,19 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
+        <groupId>jakarta.ejb</groupId>
+        <artifactId>jakarta.ejb-api</artifactId>
+        <version>${version.jakarta.ejb}</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.transaction</groupId>
+        <artifactId>jakarta.transaction-api</artifactId>
+        <version>${version.jakarta.transaction}</version>
+      </dependency>
+      <dependency>
         <groupId>org.jboss</groupId>
         <artifactId>jboss-ejb-client-legacy</artifactId>
         <version>${version.org.jboss}</version>
-        <scope>test</scope>
         <exclusions>
           <exclusion>
             <groupId>org.jboss.spec.javax.transaction</groupId>
@@ -431,16 +440,6 @@
         <version>${version.org.wildfly.security}</version>
       </dependency>
       <dependency>
-        <groupId>jakarta.ejb</groupId>
-        <artifactId>jakarta.ejb-api</artifactId>
-        <version>${version.jakarta.ejb}</version>
-      </dependency>
-      <dependency>
-        <groupId>jakarta.transaction</groupId>
-        <artifactId>jakarta.transaction-api</artifactId>
-        <version>${version.jakarta.transaction}</version>
-      </dependency>
-      <dependency>
         <groupId>org.jboss.ejb3</groupId>
         <artifactId>jboss-ejb3-ext-api</artifactId>
         <version>${version.org.jboss.ejb3}</version>
@@ -556,9 +555,16 @@
   </dependencyManagement>
   <dependencies>
     <dependency>
+      <groupId>jakarta.ejb</groupId>
+      <artifactId>jakarta.ejb-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.transaction</groupId>
+      <artifactId>jakarta.transaction-api</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.jboss</groupId>
       <artifactId>jboss-ejb-client-legacy</artifactId>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jboss.marshalling</groupId>
@@ -823,14 +829,6 @@
     <dependency>
       <groupId>org.wildfly.security</groupId>
       <artifactId>wildfly-elytron-x500-principal</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.ejb</groupId>
-      <artifactId>jakarta.ejb-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.transaction</groupId>
-      <artifactId>jakarta.transaction-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.jboss.ejb3</groupId>
